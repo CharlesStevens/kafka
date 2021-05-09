@@ -18,7 +18,7 @@ public class SpringKafkaController {
     @PostMapping("producer/produceMessage")
     public void startProducing(@RequestBody String message, @RequestParam("topic") String topic) {
         log.info("produce message called for topic : " + topic);
-        producerService.send(topic, message);
+        producerService.send(message, topic);
     }
 
 }
