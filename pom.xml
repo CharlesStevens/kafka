@@ -12,13 +12,13 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring.boot.starter.version>2.1.1.RELEASE</spring.boot.starter.version>
+        <spring.boot.starter.version>2.3.2.RELEASE</spring.boot.starter.version>
     </properties>
 
     <modules>
         <module>kafka-producer</module>
         <module>kafka-consumer</module>
-        <module>spring-kafka</module>
+        <module>spring-kafka-sample</module>
     </modules>
 
 

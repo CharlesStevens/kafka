@@ -18,13 +18,13 @@ public class KafkaTopicBuilder {
 
     @Bean
     public NewTopic kafkaTopic() {
-        return TopicBuilder.name("employee").build();
+        return TopicBuilder.name("employee").partitions(3).replicas(3).build();
     }
 
     @Bean
-    public KafkaAdmin admin(){
-        Map<String,Object> configs=  new HashMap<>();
-        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,bootstrapServer);
+    public KafkaAdmin admin() {
+        Map<String, Object> configs = new HashMap<>();
+        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         return new KafkaAdmin(configs);
     }
 }
