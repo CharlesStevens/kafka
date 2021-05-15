@@ -19,6 +19,7 @@
         <module>kafka-producer</module>
         <module>kafka-consumer</module>
         <module>spring-kafka-sample</module>
+        <module>spring-kafka-stream-sample</module>
     </modules>
 
 

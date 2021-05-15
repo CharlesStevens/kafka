@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring_kafka_stream_sample
+  cloud:
+    stream:
+      default.consumer.headerMode: embeddedHeaders
+      default.producer.headerMode: embeddedHeaders
+      bindings:
+        employeechannel:
+          destination: employee
+          content-type: application/xml
+          binder: kafka
+          group: group-01
+      kafka:
+        binder:
+          brokers: box1:9092,box2:9092,box3:9092
+        bindings:
+          employeechannel.consumer.startOffset: latest
